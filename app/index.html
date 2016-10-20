@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-strict-di>
+<head>
+	<title>Angular ES6 Sample</title>
+	<link rel="stylesheet" href="app.css">
+	<meta charset = "utf-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="libs/bootstrap.min.css">
+  <script src="libs/bootstrap.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="top" ng-show=flag>
+	  <d1><div class="bton"><button ng-click="d1c.logout()" class="btn btn-primary btn-sm">Logout</button></div></d1>
+	</div>
+
+	<div class="mid">
+
+	  <div class="col-sm-3">
+			<div class="left" ng-show=flag>
+		    <d3></d3>
+	    </div>
+  	</div>
+
+	  <div class="col-sm-9 right">
+	  	  <div ng-view></div>
+	  </div>
+
+	</div>
+
+	<div class="bottom" ng-show=flag>
+		<d2></d2>
+	</div>
+
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<script src="libs/ngStorage.min.js"></script>
+	<script src="app.min.js"></script>
+</body>
+</html>

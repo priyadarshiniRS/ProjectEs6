@@ -1,0 +1,35 @@
+<div class="even"  ng-dblclick="v1c.checkfun()">
+<div class="row" ng-if="alert">
+  <div class="alert alert-success">
+  <strong>Success!</strong> Your Data Has Been Updated!!.
+</div>
+</div>
+<div class="row" ng-if="check">
+  <div  class="col-md-2"><button ng-click="v1c.deside()" class="btn btn-info btn-sm">{{!v1c.enablebtn() && 'SelectAll' || 'UnselectAll'}}</button></div>
+  <!-- <div  class="col-md-2"><button ng-click="v1c.removeSelectedRows()" >DeleteSelected</button></div> -->
+  <div class="col-md-3"><button ng-click="v1c.delete()" class="btn btn-danger btn-sm" ng-disabled="v1c.enable()">Delete</button></div>
+  <div class="col-md-3"><button ng-click="v1c.cancel()" class="btn btn-warning btn-sm" ng-disabled="v1c.enable()">Cancel</button></div>
+
+</div>
+<div class="row">
+<div class="col-md-1" style="text-decoration: underline;" ng-if="check">CHECK</div>
+<div class="col-md-1" style="text-decoration: underline;">ID</div>
+<div class="col-md-3" style="text-decoration: underline;">FIRSTNAME </div>
+<div class="col-md-2" style="text-decoration: underline;">LASTNAME</div>
+<div class="col-md-3" style="text-decoration: underline;">DESIGNATION</div>
+<div class="col-md-2" style="text-decoration: underline;">UPDATE </div>
+</div>
+
+<div class="row" ng-repeat="x in value" ng-click="v1c.checked($index)">
+  <br></br>
+    <div class="col-md-1 " ng-if="check"><input type="checkbox"  ng-checked="ar[$index]" ng-disabled="!check"/></div>
+    <div class="col-md-1">{{x.cid }}</div>
+    <div class="col-md-3"> {{x.first_name}} </div>
+    <div class="col-md-2">{{x.last_name }}</div>
+    <div class="col-md-3">{{x.designation }}</div>
+    <div class="col-md-2"><button ng-click="v1c.update(x.cid)" class="btn btn-success btn-sm">Update</button></div>
+  </div>
+  <br></br>
+  <center><button ng-click="v1c.create()" class="btn btn-warning">Add Employee</button></center>
+
+</div>

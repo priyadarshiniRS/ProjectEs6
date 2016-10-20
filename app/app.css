@@ -1,0 +1,45 @@
+.top{
+  float: top;
+  background-color: #E5E5E5 ;
+}
+
+body{
+  background-color: #666666 !important;
+}
+.left{
+  background-color: #E5E5E5;
+}
+
+.bottom{
+  margin-top: 60%;
+  height:35px;
+  width:100%;
+  float:bottom;
+  text-align: center;
+}
+.loginform{
+  margin-right:40%;
+  margin-top:10%;
+  background-color: #ffffff;
+}
+.even{
+  background-color:#ffffff;
+}
+.form{
+  color: #ffffff;
+}
+.input-group .control-label::after {
+  content:"*";
+  color:red;
+}
+.bton{
+  margin-left: 90%;
+}
+
+ a.active {
+  text-decoration: underline;
+ }
+
+.even .row{
+  margin-left:5px;
+}

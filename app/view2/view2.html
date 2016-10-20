@@ -1,0 +1,47 @@
+<span us-spinner="{radius:30, width:8, length: 16}"></span><br />
+<form name="Form" class="form">
+
+  <div class="input-group">
+    <span class="input-group-addon control-label">FirstName:</span>
+    <div class="col-md-10">
+    <input type="text" name="fname" class="form-control" ng-model="obj.first_name"  ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Enter firstName" maxlength="20" ng-required="true"><br/>
+    <span ng-show="Form.fname.$error.pattern">Only Charecters Allowed</span>
+    </div>
+  </div>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon control-label">LastName:</span>
+    <div class="col-md-10">
+    <input type="text" name="lname" class="form-control" ng-model="obj.last_name"  ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Enter LastName" maxlength="20" ng-required="true"><br/>
+    <span ng-show="Form.lname.$error.pattern">Only Charecters Allowed</span>
+    </div>
+  </div>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon control-label">Gender:</span>
+    <div class="col-md-10">
+    <label class="radio-inline"><input type="radio" ng-model="obj.gender" name="gender" value="Male" ng-required="true">Male</label>
+    <label class="radio-inline"><input type="radio" ng-model="obj.gender" name="gender" value="Female" ng-required="true">Female</label>
+    </div>
+  </div>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon control-label">Designation:</span>
+    <div class="col-md-10">
+    <input type="text" name="dsg" class="form-control" ng-model="obj.designation" ng-pattern="/^[a-zA-Z.\s]*$/" placeholder="Enter Designation" maxlength="30" ng-required="true">
+    <span ng-show="Form.dsg.$error.pattern">Only Charecters Allowed</span>
+    </div>
+  </div>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon control-label">Description:</span>
+    <div class="col-md-10">
+    <input type="text" name="des" class="form-control" ng-model="obj.description" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Enter Description" maxlength="30" ng-required="true"><br>
+    <span ng-show="Form.des.$error.pattern">Only Charecters Allowed</span>
+    </div>
+  </div>
+<br>
+<p><span style="color:red">*</span>Required Field</p>
+  <center><button ng-click="v2c.create()" ng-if="!flag1" class="btn btn-success btn-sm" ng-disabled="Form.$invalid ||CreateButtonText=='Creating'">{{CreateButtonText}}</button></center>
+  <center><button ng-click="v2c.update()" ng-if="flag1" class="btn btn-success btn-sm" ng-disabled="Form.$invalid ||UpdateButtonText=='Updating'" >{{UpdateButtonText}}</button></center>
+</form>
